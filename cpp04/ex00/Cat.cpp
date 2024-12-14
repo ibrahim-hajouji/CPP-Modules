@@ -6,7 +6,7 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 01:53:18 by ihajouji          #+#    #+#             */
-/*   Updated: 2024/11/30 01:57:00 by ihajouji         ###   ########.fr       */
+/*   Updated: 2024/12/12 01:11:51 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ Cat::~Cat()
     std::cout << "\033[33m" << "Cat: " << "\033[0m" << name << " has been destructed" << std::endl;
 }
 
-void    Cat::makeSound()
+void    Cat::makeSound() const
 {
     std::cout << "\033[33m" << "Cat: " << "\033[0m" << name << " is meowing" << std::endl;   
 }

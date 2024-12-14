@@ -6,7 +6,7 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 01:02:25 by ihajouji          #+#    #+#             */
-/*   Updated: 2024/12/03 04:40:52 by ihajouji         ###   ########.fr       */
+/*   Updated: 2024/12/12 01:36:56 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Dog::Dog()  : Animal("Dog")
 {
-    this->name = "Snow";
+    this->name = "Arya";
     this->brain = new Brain();
     if (!this->brain)
     {
@@ -48,11 +48,6 @@ Dog &Dog::operator=(const Dog   &src)
     
         this->name = src.name;
         Animal::operator=(src);
-        // if (this->brain != NULL)
-        //     printf("Brain is not null\n");
-        // else if (this->brain == NULL)
-        //     printf("Brain is null\n");
-        // if (this->brain != NULL)
         this->brain = new Brain();
         if (!this->brain)
         {
@@ -71,7 +66,7 @@ Dog::~Dog()
     std::cout << "\033[34m" << "Dog: " << "\033[0m" << name << " has been destructed" << std::endl;
 }
 
-void    Dog::makeSound()
+void    Dog::makeSound() const
 {
     std::cout << "\033[34m" << "Dog: " << "\033[0m" << name << " is barking" << std::endl;   
 }

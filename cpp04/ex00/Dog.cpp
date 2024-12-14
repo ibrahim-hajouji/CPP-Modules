@@ -6,7 +6,7 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 01:02:25 by ihajouji          #+#    #+#             */
-/*   Updated: 2024/11/30 23:55:34 by ihajouji         ###   ########.fr       */
+/*   Updated: 2024/12/12 01:12:01 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ Dog::~Dog()
     std::cout << "\033[34m" << "Dog: " << "\033[0m" << name << " has been destructed" << std::endl;
 }
 
-void    Dog::makeSound()
+void    Dog::makeSound() const
 {
     std::cout << "\033[34m" << "Dog: " << "\033[0m" << name << " is barking" << std::endl;   
 }

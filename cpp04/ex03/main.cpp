@@ -6,7 +6,7 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 22:05:08 by ihajouji          #+#    #+#             */
-/*   Updated: 2024/12/06 22:06:27 by ihajouji         ###   ########.fr       */
+/*   Updated: 2024/12/14 07:50:48 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "Ice.hpp"
 #include "MateriaSource.hpp"
 
-void tst()
+int main()
 {
 	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());
@@ -26,26 +26,24 @@ void tst()
 	AMateria* tmp;
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
-	tmp = src->createMateria("cure"); 	// leak here i should find a way to dont make the tmp pointer loose the address of src->createMateria("ice")
+	tmp = src->createMateria("cure");
 	me->equip(tmp);
+	tmp = src->createMateria("ice");
+	me->equip(tmp);
+	tmp = src->createMateria("cure");
+	me->equip(tmp);
+	me->unequip(0);
+	me->unequip(1);
+	me->unequip(2);
+	me->unequip(3);
 
 	ICharacter* bob = new Character("bob");
 
 	me->use(0, *bob);
 	me->use(1, *bob);
-	me->unequip(0);
-	me->unequip(1);
 
 	delete bob;
 	delete me;
-	// delete tmp;
 	delete src;
-	
-}
-
-int main()
-{
-	tst();
-	// system("leaks Interface");
 	return 0;
 }

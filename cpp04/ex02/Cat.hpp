@@ -6,7 +6,7 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 01:51:32 by ihajouji          #+#    #+#             */
-/*   Updated: 2024/12/01 05:40:26 by ihajouji         ###   ########.fr       */
+/*   Updated: 2024/12/12 01:53:40 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class   Cat : public Animal
         Cat &operator=(const Cat &src);
         ~Cat();
 
-        void    makeSound();
+        void    makeSound() const;
 };
 
 #endif

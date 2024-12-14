@@ -6,7 +6,7 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 21:52:02 by ihajouji          #+#    #+#             */
-/*   Updated: 2024/11/30 21:27:26 by ihajouji         ###   ########.fr       */
+/*   Updated: 2024/12/12 01:11:19 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class   Animal
         Animal  &operator=(const Animal &src);
         virtual ~Animal();
         
-        virtual void    makeSound();
+        virtual void    makeSound() const;
 };
 
 #endif

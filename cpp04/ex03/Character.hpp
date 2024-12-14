@@ -6,7 +6,7 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 23:16:12 by ihajouji          #+#    #+#             */
-/*   Updated: 2024/12/06 21:06:14 by ihajouji         ###   ########.fr       */
+/*   Updated: 2024/12/12 03:12:35 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Character : public ICharacter
     private:
         std::string name;
         AMateria *inv_slot[4];
-        int last_index;
+        int used_slots;
         AMateria *unequiped_materia[4];
     public:
         Character();

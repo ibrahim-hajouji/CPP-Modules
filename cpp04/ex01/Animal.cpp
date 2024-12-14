@@ -6,7 +6,7 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 21:59:18 by ihajouji          #+#    #+#             */
-/*   Updated: 2024/12/03 03:08:46 by ihajouji         ###   ########.fr       */
+/*   Updated: 2024/12/12 01:33:33 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ Animal::~Animal()
     std::cout << "\033[31m" << "Animal: " << "\033[0m" << type << " has been destructed" << std::endl;
 }
 
-void    Animal::makeSound()
+void    Animal::makeSound() const
 {
     std::cout << "\033[31m" << "Animal: " << "\033[0m" << type << " is yapping" <<std::endl;
 }

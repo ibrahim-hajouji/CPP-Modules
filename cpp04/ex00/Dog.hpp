@@ -6,7 +6,7 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 22:40:17 by ihajouji          #+#    #+#             */
-/*   Updated: 2024/11/30 01:10:21 by ihajouji         ###   ########.fr       */
+/*   Updated: 2024/12/12 01:12:07 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class   Dog : public Animal
         Dog &operator=(const Dog &src);
         ~Dog();
 
-        void    makeSound();
+        void    makeSound() const;
 };
 
 #endif

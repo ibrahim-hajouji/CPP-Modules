@@ -6,7 +6,7 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 22:40:17 by ihajouji          #+#    #+#             */
-/*   Updated: 2024/12/03 00:00:19 by ihajouji         ###   ########.fr       */
+/*   Updated: 2024/12/12 01:53:30 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class   Dog : public Animal
         const std::string &_getIdea(int index) const;
         void    _setIdea(const std::string &idea, int index);
 
-        void    makeSound();
+        void    makeSound() const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 01:37:35 by ihajouji          #+#    #+#             */
-/*   Updated: 2024/12/03 04:44:32 by ihajouji         ###   ########.fr       */
+/*   Updated: 2024/12/12 01:34:20 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,6 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "Brain.hpp"
-
-// int main()
-// {
-//     const Animal* j = new Dog();
-//     const Animal* i = new Cat();
-//     delete j;
-//     delete i;
-//     system("leaks animals");
-//     return 0;
-// }
 
 int main ()
 {
