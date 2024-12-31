@@ -45,7 +45,7 @@ Dog::Dog(const Dog &src) : Animal()
 Dog &Dog::operator=(const Dog   &src)
 {
     if (this != &src)
-    
+    {
         this->name = src.name;
         Animal::operator=(src);
         this->brain = new Brain();
@@ -55,7 +55,7 @@ Dog &Dog::operator=(const Dog   &src)
             exit(1);
         }
         *this->brain = *src.brain;
-    
+    }
     std::cout << "\033[34m" << "Dog: " << "\033[0m" << name << " has been assigned" << std::endl;
     return (*this);
 }

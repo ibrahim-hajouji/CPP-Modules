@@ -14,7 +14,7 @@
 #define ANIMAL_HPP
 
 #include <iostream>
-
+#include <cstdlib>
 class   Animal
 {
     protected:

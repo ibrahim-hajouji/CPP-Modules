@@ -15,13 +15,42 @@
 
 #include "Bureaucrat.hpp"
 
+class Bureaucrat;
+
 class Form
 {
     private:
         const std::string _name;
-        bool signed;
-        const 
+        bool isSigned;
+        const int sign_grade;
+        const int execute_grade;
+    public:
+        Form();
+        Form(const std::string name, const int sg, const int eg);
+        Form(const Form &src);
+        Form &operator=(const Form &src);
+        ~Form();
+
+        const std::string &getName() const;
+        int getSGrade() const;
+        int getEGrade() const;
+        bool getSigned() const;
+        void  beSigned(Bureaucrat &obj);  
+        
+        class GradeTooHighException : public std::exception
+        {
+            public:
+                virtual const char* what() const throw();
+        };
+
+        class GradeTooLowException : public std::exception
+        {
+            public:
+                virtual const char* what() const throw();
+        };
         
 };
+
+std::ostream& operator<<(std::ostream &out, const Form& src);
 
 #endif
