@@ -6,7 +6,7 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 05:25:50 by ihajouji          #+#    #+#             */
-/*   Updated: 2025/01/01 06:25:08 by ihajouji         ###   ########.fr       */
+/*   Updated: 2025/01/01 03:47:20 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ AForm &AForm::operator=(const AForm &src)
 
 AForm::~AForm()
 {
-
+    
 }
 
 const std::string &AForm::getName() const
