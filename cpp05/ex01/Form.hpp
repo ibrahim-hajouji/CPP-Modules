@@ -21,7 +21,7 @@ class Form
 {
     private:
         const std::string _name;
-        bool isSigned;
+        bool isSigned; 
         const int sign_grade;
         const int execute_grade;
     public:

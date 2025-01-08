@@ -6,7 +6,7 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/01 04:36:59 by ihajouji          #+#    #+#             */
-/*   Updated: 2025/01/02 21:54:21 by ihajouji         ###   ########.fr       */
+/*   Updated: 2025/01/08 09:10:53 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int main ()
 
     std::cout << "-----------------------------------------------------------------------" << std::endl;
 
-    Bureaucrat b13("b13", 25);
+    Bureaucrat b13("b13", 26);
     PresidentialPardonForm f13("f13");
     b13.signForm(f13);
     b13.executeForm(f13);

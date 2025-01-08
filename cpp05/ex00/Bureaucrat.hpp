@@ -6,7 +6,7 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/29 22:47:28 by ihajouji          #+#    #+#             */
-/*   Updated: 2024/12/30 22:22:07 by ihajouji         ###   ########.fr       */
+/*   Updated: 2025/01/08 07:06:26 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ class Bureaucrat
         int getGrade() const;
         void incrementGrade();
         void decrementGrade();
+
         class GradeTooHighException : public std::exception
         {
             public:

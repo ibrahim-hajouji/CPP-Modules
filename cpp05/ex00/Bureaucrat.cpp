@@ -6,7 +6,7 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/29 22:47:30 by ihajouji          #+#    #+#             */
-/*   Updated: 2024/12/30 22:23:23 by ihajouji         ###   ########.fr       */
+/*   Updated: 2025/01/08 07:09:34 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ Bureaucrat::~Bureaucrat()
 
 const std::string &Bureaucrat::getName() const
 {
-    return (this->_name);  
+    return (this->_name);
 }
 
 int Bureaucrat::getGrade() const

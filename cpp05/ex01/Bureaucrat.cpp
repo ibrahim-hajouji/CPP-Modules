@@ -80,12 +80,14 @@ const char *Bureaucrat::GradeTooLowException::what() const throw()
 
 void Bureaucrat::signForm(Form &obj)
 {
-    if (obj.getSGrade() < this->getGrade())
-        std::cout << this->getName() << " cannot sign " << obj.getName() << " because his grade is too low" << std::endl;
-    else
+    try
     {
         obj.beSigned(*this);
-        std::cout << this->getName() << " signs " << obj.getName() << std::endl;
+        std::cout << this->_name << " signs " << obj.getName() << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << this->_name << " cannot sign " << obj.getName() << " because " << e.what() << std::endl;
     }
 }
 

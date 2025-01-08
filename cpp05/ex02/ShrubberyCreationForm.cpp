@@ -6,7 +6,7 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/01 02:55:26 by ihajouji          #+#    #+#             */
-/*   Updated: 2025/01/01 06:25:00 by ihajouji         ###   ########.fr       */
+/*   Updated: 2025/01/08 08:00:16 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void    ShrubberyCreationForm::execute(Bureaucrat const &executor) const
     {
         if (executor.getGrade() <= this->getEGrade())
         {
-            std::ofstream target_file(this->target, std::ios::trunc);
+            std::ofstream target_file(this->target + "_shrubbery", std::ios::trunc);
             if (!target_file.is_open())
                 throw (ShrubberyCreationForm::FileNotOpenedException());
             target_file << "                                  # #### ####\n";

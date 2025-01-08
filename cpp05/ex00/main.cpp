@@ -6,7 +6,7 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/29 22:47:25 by ihajouji          #+#    #+#             */
-/*   Updated: 2024/12/30 22:31:49 by ihajouji         ###   ########.fr       */
+/*   Updated: 2025/01/08 07:27:44 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int main()
     }
     try
     {
-        Bureaucrat b("imane", 150);
+        Bureaucrat b("imane", 151);
         std::cout << b;
         b.decrementGrade();
     }

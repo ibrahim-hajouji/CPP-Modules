@@ -25,15 +25,17 @@ int main ()
         std::cout << e.what() << std::endl;
     }
 
+    std::cout << "---------------------" << std::endl;
+
     try
     {
         Form f2("f2", 120, 120);
         std::cout << f2;
         Bureaucrat b1("b1", 1);
-        Bureaucrat b2("b2", 150);
         std::cout << b1;
         b1.signForm(f2);
         std::cout << f2;
+        Bureaucrat b2("b2", 150);
         f2.beSigned(b2);
     }
     catch (std::exception &e)
