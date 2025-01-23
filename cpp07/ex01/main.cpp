@@ -12,12 +12,14 @@
 
 #include "iter.hpp"
 
-int main ()
+int main()
 {
     int array[5] = {1, 2, 3};
-    iter(array, 3, print_);
+    iter<int, int>(array, 3, print_);
     std::cout << "-----------------------------" << std::endl;
     
     std::string arr[3] = {"hello", "world", "!"};
-    iter(arr, 3, print_);
+    iter<std::string, std::string>(arr, 3, print_);
+    
+    return 0;
 }
