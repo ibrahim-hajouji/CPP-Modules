@@ -15,8 +15,8 @@
 
 #include <iostream>
 
-template <typename T, typename F>
-void    iter(T *array, int size, void (*func)(F &))
+template <typename T>
+void    iter(T *array, int size, void (*func)(T &))
 {
     for (int i = 0; i < size; i++)
         func(array[i]);

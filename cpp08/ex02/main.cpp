@@ -6,7 +6,7 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 14:56:21 by ihajouji          #+#    #+#             */
-/*   Updated: 2025/01/17 17:54:25 by ihajouji         ###   ########.fr       */
+/*   Updated: 2025/01/25 18:37:33 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ int main()
 
     mstack.push(5);
     mstack.push(17);
-    std::cout << "Top element: " << mstack.top() << std::endl;
+    std::cout << "\033[33m" << "Top element: " << "\033[0m"  << mstack.top() << std::endl;
 
     mstack.pop();
-    std::cout << "Size after pop: " << mstack.size() << std::endl;
+    std::cout << "\033[33m" << "Size after pop: " << "\033[0m"  << mstack.size() << std::endl;
 
     mstack.push(3);
     mstack.push(5);
@@ -37,41 +37,33 @@ int main()
 
     ++it;
     --it;
-    std::cout << "Stack elements:" << std::endl;
+    std::cout << "\033[33m" << "Stack elements: " << "\033[0m" ;
     while (it != ite) {
-        std::cout << *it << std::endl;
+        std::cout << *it << " ";
         ++it;
     }
+    std::cout << std::endl;
 
-    std::cout << "-----------------------------" << std::endl;
-
-
-    std::list<int> mstack2;
-
-    mstack2.push_back(5);
-    mstack2.push_back(17);
-    std::cout << "Top element: " << mstack2.back() << std::endl;
-
-    mstack2.pop_back();
-    std::cout << "Size after pop: " << mstack2.size() << std::endl;
-
-    mstack2.push_back(3);
-    mstack2.push_back(5);
-    mstack2.push_back(737);
-    mstack2.push_back(0);
-
-    // Iterating through the list
-    std::list<int>::iterator itt = mstack2.begin();
-    std::list<int>::iterator itte = mstack2.end();
-
-    ++itt;
-    --itt;
-    std::cout << "Stack elements:" << std::endl;
-    while (itt != itte)
-    {
-        std::cout << *itt << std::endl;
-        ++itt;
+    std::cout << "\033[33m" "Stack elements (reverse): " << "\033[0m";
+    MutantStack<int>::reverse_iterator rit = mstack.rbegin();
+    MutantStack<int>::reverse_iterator rite = mstack.rend();
+    while (rit != rite) {
+        std::cout << *rit << " ";
+        ++rit;
     }
+    std::cout << std::endl;
     
-    return 0;
+    std::cout << "-----------------------------------------" << std::endl;
+
+    MutantStack<int> mstack2;
+    std::cout << "\033[33m" << "Size of mstack2 before the copy: " << "\033[0m" << mstack2.size() << std::endl;
+    mstack2 = mstack;
+    std::cout << "\033[33m" << "Size of mstack2: after the copy: " << "\033[0m" << mstack2.size() << std::endl;
+    std::cout << "\033[33m" << "Stack2 elements from the top: " << "\033[0m" ;
+    while (!mstack2.empty()) {
+        std::cout << mstack2.top() << " ";
+        mstack2.pop();
+    }
+    std::cout << std::endl;
+
 }

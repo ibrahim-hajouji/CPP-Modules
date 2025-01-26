@@ -6,7 +6,7 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 12:00:58 by ihajouji          #+#    #+#             */
-/*   Updated: 2025/01/17 13:10:00 by ihajouji         ###   ########.fr       */
+/*   Updated: 2025/01/26 12:38:21 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int Span::longestSpan()
         throw(std::runtime_error("Not enough numbers to calculate the span"));
     std::vector<int> tmp = vec;
     std::sort(tmp.begin(), tmp.end());
-    return (tmp[N - 1] - tmp[0]);
+    return (tmp[tmp.size() - 1] - tmp[0]);
 }
 
 void    Span::addRange(std::vector<int>::iterator start, std::vector<int>::iterator end)

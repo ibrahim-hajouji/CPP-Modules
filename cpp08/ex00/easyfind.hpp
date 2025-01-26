@@ -6,7 +6,7 @@
 /*   By: ihajouji <ihajouji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 13:09:48 by ihajouji          #+#    #+#             */
-/*   Updated: 2025/01/15 13:31:54 by ihajouji         ###   ########.fr       */
+/*   Updated: 2025/01/25 17:52:14 by ihajouji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,4 @@ typename T::iterator easyfind(T container, int val)
     return it;
 }
 
-#endif 
+#endif
