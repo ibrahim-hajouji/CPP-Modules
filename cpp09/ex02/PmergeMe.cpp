@@ -101,9 +101,9 @@ void PmergeMe::mergeInsertionSort(std::vector<int> &vec)
         pend.push_back(pairs[i].first);     // Smaller number
     }
 
-    // If odd number of elements, last one goes into mainSeq
+    // If odd number of elements, last one goes into pend
     if (vec.size() % 2 != 0)
-        mainSeq.push_back(vec.back());
+        pend.push_back(vec.back());
 
     // Step 3: Recursively sort mainSeq
     mergeInsertionSort(mainSeq);
@@ -185,9 +185,9 @@ void    PmergeMe::mergeInsertionSort(std::deque<int> &deq)
         pend.push_back(pairs[i].first);     // Smaller number
     }
 
-    // If odd number of elements, last one goes into mainSeq
+    // If odd number of elements, last one goes into pend
     if (deq.size() % 2 != 0)
-        mainSeq.push_back(deq.back());
+        pend.push_back(deq.back());
 
     // Step 3: Recursively sort mainSeq
     mergeInsertionSort(mainSeq);
